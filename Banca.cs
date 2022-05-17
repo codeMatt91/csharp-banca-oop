@@ -110,6 +110,22 @@ namespace csharp_banca_oop
                 return false;
             }
         }
+
+
+        public void totPrestitiCliente(string CF)
+        {
+            int totPrestiti = 0;
+
+            foreach (Prestito p in listaPrestiti)
+            {
+                if (p.Intestatario.CodiceFCliente == CF)
+                {
+                    totPrestiti++;
+                }
+            }
+
+            Console.WriteLine("Il totale dei prestiti del cliente e: {0}", totPrestiti);
+        }
     }
 
 
